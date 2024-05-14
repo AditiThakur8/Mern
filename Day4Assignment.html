@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form</title>
+    <style>
+        body{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+            margin:0;
+            background-color: rgba(249, 56, 175, 0.618);
+        }
+        form{
+            width:400px;
+            background-color:blanchedalmond;
+            padding:20px;
+            border-radius:8px;
+            box-shadow:0010px rgba(0, 0, 0.1);
+        }
+        fieldset{
+            border:1px solid black;
+            padding:10px;
+            margin:0;
+        }
+        legend {
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+        label{
+            display:block;
+            margin-bottom: 5px;
+        }
+        
+        input[type="text"],input[type="email"],input[type="password"],input[type="checkbox"]{
+            margin-left:20px ;
+        }
+        textarea,input[type="date"]{
+            width:calc(100%-20px);
+            padding:8px;
+            margin-bottom: 10px;
+            box-sizing:border-box;
+            border:1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="radio"]{
+            margin-left: 20px;
+        }
+        input[type="submit"]{
+            padding:10px 20px;
+            border-radius:5px;
+            cursor: pointer;
+
+        }
+        input[type="reset"]{
+            padding:10px 20px;
+            border-radius:5px;
+            cursor: pointer;
+
+        }
+
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend  align="center" >
+                <b>User Personal Information</b>
+            </legend>
+            <label>Enter your full name:</label>
+            <input type="text" name="name"/>
+            <label>Enter your email:</label>
+            <input type="email" name="email"/>
+            <label>Enter your password:</label>
+            <input type="password" name="pass"/>
+            <label>Confirm your password:</label>
+            <input type="password" name="confirmpass"/>
+            <label>Enter your gender:</label>
+            <input type="radio"
+            name="gender"
+            value="male"/>Male
+            <input type="radio"
+            name="gender"
+            value="female"/>Female
+            <input type="radio"
+            name="gender"
+            value="others"/>others
+            <label>Enter your date of birth:</label>
+            <input type="date" name="dob"/>
+            <label>Enter your address:</label>
+            <textarea name="address"></textarea>
+            <label for="fileselect">Upload your photo:</label>
+              <input type="file" name="upload"
+               id="fileselect">
+               <label for="country">Country:</label>
+                <select name="country" id="country">
+                <option value="India">India</option>
+                <option value="Sri Lanka">Sri Lanka</option>
+                <option value="Australia">Australia</option>
+               </select>
+              
+             <input type="submit" value="submit" />
+             <input type="reset" value="Reset">
+        </fieldset>
+    </form>
+</body>
+</html>
